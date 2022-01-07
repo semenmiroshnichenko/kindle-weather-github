@@ -18,11 +18,9 @@ jobs:
         env:
           WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
         run: |
-          pwd
           cd ./builder
           sh weather-generator.sh
       - uses: actions/upload-artifact@v2
         with:
-          name: Archive picture
+          name: Weather
           path: /tmp/weather-crushed.png
-      - run: echo "🍏 This job's status is ${{ job.status }}."
