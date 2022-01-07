@@ -9,9 +9,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Install packages
         run: |
-          sudo apt install librsvg2-bin pngcrush
-          which rsvg-convert
-          which pngcrush
+          sudo apt install librsvg2-bin pngcrush python2
+          which python
+          python --version
       - run: echo "Test 2"
       - name: List files in the repository
         run: |
