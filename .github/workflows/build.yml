@@ -7,6 +7,10 @@ jobs:
       - run: echo "Test"
       - name: Check out repository code
         uses: actions/checkout@v2
+      - name: Install packages
+        run: run: |
+        sudo apt install librsvg2-bin
+        which rsvg-convert
       - run: echo "Test 2"
       - name: List files in the repository
         run: |
