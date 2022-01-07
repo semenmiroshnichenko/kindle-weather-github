@@ -1,0 +1,14 @@
+name: Build weather
+on: workflow_dispatch
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test"
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "Test 2"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
